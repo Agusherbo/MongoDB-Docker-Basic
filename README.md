@@ -15,6 +15,7 @@ Opción 2: En la linea de comando, ejecutar:
 _____________________________________________
 ### Paso 2. Crear documento de docker-compose.yml:
 
+'''
 version: '2.2'
 
 services:
@@ -32,6 +33,7 @@ services:
       - ./monguitodata/log:/var/log/mongodb/
     ports:
       - "27017:27017"
+  '''
     
 ____________________________________________________________
 ### Paso 3. Crear archivos para correr comando en la la terminal:
