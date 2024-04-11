@@ -73,35 +73,3 @@ _________________________________________________________
 
 USAR MONGO A PLACER.
 
-
-### Algunos comandos básicos:
-
-**Mostrar Bases de datos:**
-```
-> show dbs
-```
-
-**Crear o ubicarse en una base de datos:**
-```
-> use databasename
-```
-
-**Saber qué base de datos estamos usando:**
-```
-> db
-```
-
-**Crear colección:**
-```
-> db.createCollection('nameCollection')
-{"Clave": "Valor"}
-```
-
-**Mostrar el contenido de una colección:**
-```
-> showCollections
-```
-> chmod u+x mongo.sh
-> ./mongo.sh 
-_______
-
