@@ -5,18 +5,15 @@ CREANDO UN CONTENEDOR
 Instalar Mongo: 
 En la línea de comando.
 ____________________________________________________________
-Paso 1. Crear documento de docker-compose.
+### Paso 1. Crear documento de docker-compose.
 
-Opción 1.
+Opción 1: Usar docker compose, visual estudio code, instalando la extensión de docker.
 
-> Usar docker compose, visual estudio code, instalando la extensión de docker.
-
-Opción 2.
-
+Opción 2: En la linea de comando, ejecutar:
 > touch docker-compose.yml
 > cat > docker-compose.yml
 _____________________________________________
-Paso 2. Crear documento de docker-compose.yml:
+### Paso 2. Crear documento de docker-compose.yml:
 
 version: '2.2'
 
@@ -37,11 +34,11 @@ services:
       - "27017:27017"
     
 ____________________________________________________________
-paso 3. Crear archivos para correr comando en la la terminal:
+### Paso 3. Crear archivos para correr comando en la la terminal:
 
 > touch mongo.sh
 __________________________________________
-Paso 4. Cargar comandos al archivo creado:
+### Paso 4. Cargar comandos al archivo creado:
 
 > cat > mongo.sh   	(Copiar y pegar los comandos que queremos se ejecuten automáticos)
 
@@ -60,14 +57,14 @@ echo "Monguito está iniciandose ......."
 sudo docker exec -it monguito bash
 
 _______
-Paso 5.
+### Paso 5: 
 
 > Control + d
 _________________________________________________________
-Paso 6. Asignar permisos de ejecución y ejecutar mongo.sh
+### Paso 6: Asignar permisos de ejecución y ejecutar mongo.sh
 > chmod u+x mongo.sh
 > ./mongo.sh 
 _______
-Paso 7. 
+### Paso 7. 
 
 USAR MONGO A PLACER.
