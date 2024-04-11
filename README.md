@@ -1,9 +1,8 @@
 # MongoDB-Docker-Basic
 
-CREANDO UN CONTENEDOR
+## Instalación
 
-Instalar Mongo: 
-En la línea de comando.
+#### Paso 1: Crear documento de docker-compose
 ____________________________________________________________
 ### Paso 1. Crear documento de docker-compose.
 
