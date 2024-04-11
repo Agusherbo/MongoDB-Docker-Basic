@@ -10,12 +10,13 @@ ____________________________________________________________
 Opción 1: Usar docker compose, visual estudio code, instalando la extensión de docker.
 
 Opción 2: En la linea de comando, ejecutar:
+
 > touch docker-compose.yml
 > cat > docker-compose.yml
 _____________________________________________
 ### Paso 2. Crear documento de docker-compose.yml:
 
-'''
+```
 version: '2.2'
 
 services:
@@ -33,7 +34,7 @@ services:
       - ./monguitodata/log:/var/log/mongodb/
     ports:
       - "27017:27017"
-  '''
+  ```
     
 ____________________________________________________________
 ### Paso 3. Crear archivos para correr comando en la la terminal:
