@@ -35,6 +35,18 @@ services:
     ports:
       - "27017:27017"
 ```
+Explicación de cada línea
+- version del docker compose
+- el servico que queremos configurar en este caso mongo
+- nombre del servicio
+- indica que estamos utilizando la imagen oficial de MongoDB versión 4.0.4
+- asegura que el contenedor se reinicie automáticamente si se detiene
+- nombre del cointainer
+- entorno, se configura el nombre y contraseña para el usuario raiz
+- me permite mapear el almacenamiento del contenedor en este caso los dos que contiene
+- puerto que permite acceder a la base de datos MongoDB desde fuera del contenedor.
+En resumen todo este comando crea el contenedor con usuario y contraseña, monta los volumenes locales para los datos y los registros y expone en puerto 27017 para acceder a la base de datos.
+
 
 #### Paso 4: Presiona CTRL+D
 
