@@ -2,6 +2,7 @@
 ![MongoDB-DockerImage](https://media.licdn.com/dms/image/C5612AQENOC_bFx1Scg/article-cover_image-shrink_600_2000/0/1599320945318?e=2147483647&v=beta&t=Hj5K3tLMhvguYziWrDZ-ckB-zceTHkBSxLNBKr1LqaY)
 
 En este repositorio te vamos a enseñar cómo instalar MongoDB en un contenedor de Docker con una configuración básica.
+El documento docker-compose.yml crea contenedores. Tiene comandos para crear como 3 contenedores
 
 ## Instalación
 
