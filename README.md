@@ -6,9 +6,7 @@ El documento docker-compose.yml crea contenedores. Tiene comandos para crear com
 
 ## Instalación
 
-#### Paso 1: Crear documento de docker-compose
-
-Para crear el archivo docker-compose.yml, tienes dos opciones:
+#### Paso 1: Crear documento de docker-compose. Para crear el archivo docker-compose.yml, tienes dos opciones:
 
 - Opción 1: Utilizar Docker Compose en Visual Studio Code instalando la extensión de Docker.
 
