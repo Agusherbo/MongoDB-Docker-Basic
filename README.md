@@ -2,7 +2,7 @@
 ![MongoDB-DockerImage](https://media.licdn.com/dms/image/C5612AQENOC_bFx1Scg/article-cover_image-shrink_600_2000/0/1599320945318?e=2147483647&v=beta&t=Hj5K3tLMhvguYziWrDZ-ckB-zceTHkBSxLNBKr1LqaY)
 
 En este repositorio te vamos a enseñar cómo instalar MongoDB en un contenedor de Docker con una configuración básica.
-El documento docker-compose.yml crea contenedores. Tiene comandos para crear como 3 contenedores. Toma imagenes para crear esos contenedores. Las imagenes las saca de dockerHub
+Info util: el documento docker-compose.yml sirve para definir el entorno para levantar un contenedor (se define nombre, imagenes que llamarà, puertos, volumenes, etc). Las imagenes las obtiene de dockerhub.
 
 ## Instalación
 
@@ -10,12 +10,15 @@ El documento docker-compose.yml crea contenedores. Tiene comandos para crear com
 
 - Opción 1: Utilizar Docker Compose en Visual Studio Code instalando la extensión de Docker.
 
-- Opción 2: En la línea de comando, ejecutar:
+- Opción 2: En la línea de comando, ejecutar los siguientes comandos:
   ```
   touch docker-compose.yml
   cat > docker-compose.yml
   ```
-#### Paso 2: Ahora, editaremos el archivo docker-compose.yml para configurar nuestro servicio de MongoDB. Asegúrate de reemplazar "user" y "pass" con el usuario y la contraseña deseados,al terminar de copiar aprtete un enter y ctr + d para grabar y continuar.
+  Touch: Crear en el directorio acutal. cat >: ingresas dentro del archivo para editar o escribir.
+
+#### Paso 2: Ahora, editaremos el archivo docker-compose.yml para configurar nuestro servicio de MongoDB. Asegúrate de reemplazar "user" y "pass" con el usuario y la contraseña deseados. Al terminar de editar, preciones enter y luego Ctrl + d para grabar y continuar.
+A continuacion el texto a copiar dentro del docker-compose.yml
 ```
 version: '2.2'
 services:
@@ -36,16 +39,13 @@ services:
 ```
 Explicación de cada línea
 - version del docker compose
-- el servico que queremos configurar en este caso mongo
-- nombre del servicio
-- indica que estamos utilizando la imagen oficial de MongoDB versión 4.0.4
+- el servico que queremos configurar. En este caso, mongo
+- nombre del servicio. Indica que estamos utilizando la imagen oficial de MongoDB versión 4.0.4
 - asegura que el contenedor se reinicie automáticamente si se detiene
 - nombre del cointainer
-- entorno, se configura el nombre y contraseña para el usuario raiz
-- me permite mapear el almacenamiento del contenedor en este caso los dos que contiene
+- entorno, se configura el nombre y contraseña para el usuario raiz. Me permite mapear el almacenamiento del contenedor en este caso los dos que contiene
 - puerto que permite acceder a la base de datos MongoDB desde fuera del contenedor.
 En resumen todo este comando crea el contenedor con usuario y contraseña, monta los volumenes locales para los datos y los registros y expone en puerto 27017 para acceder a la base de datos.
-
 
 #### Paso 4: Presiona CTRL+D
 
@@ -57,33 +57,37 @@ touch mongo.sh
 #### Paso 6: Completa el archivo 'mongo.sh' con los siguientes comandos:
 ```
 cat > mongo.sh
-
+```
 # Crear carpeta para volumen de mongo:
+```
 mkdir monguitodata && cd monguitodata; cd monguitodata || mkdir log
-
-cd ~
-
+```
+```
+cd
+```
 # Iniciar el contenedor:
+```
 sudo docker-compose up -d
-
-# Mostrar mensaje:
-echo "Monguito está iniciandose ......."
+```
+# Mostrar mensaje: echo "Monguito está iniciandose ......."
 
 # Entrar en el contenedor
+```
 sudo docker exec -it monguito bash
 ```
-
 #### Paso 7: Presiona CTRL+D
 
 #### Paso 8: Asigna permisos de ejecución y ejecuta 'mongo.sh':
 ```
 chmod u+x mongo.sh
+```
+```
 ./mongo.sh
 ```
 
-## ¡Listo! Ya has instalado MongoDB con éxito. 
+## ¡Listo! Ya has instalado MongoDB con éxito. Entrando en el puerto [miIP]/2717 vas a poder entrar a la base de datos mongo db 
 
-### Continuemos con algunos comandos básicos:
+### Aca te dejo algunos comandos básicos:
 
 **Mostrar Bases de datos:**
 ```
@@ -110,3 +114,4 @@ chmod u+x mongo.sh
 ```
 > showCollections
 ```
+
