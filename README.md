@@ -90,6 +90,22 @@ chmod u+x mongo.sh
 
 ## ¡Listo! Ya has instalado MongoDB con éxito. Entrando en el puerto [miIP]/2717 vas a poder entrar a la base de datos mongo db 
 
+Para ingresar a la interfaz de línea de comandos de MongoDB y ejecutar comandos de MongoDB, sigue estos pasos:
+
+1. Asegúrate de que el contenedor de MongoDB esté en ejecución. Puedes verificar los contenedores en ejecución usando el comando
+```
+docker ps.
+```
+2. Accede al shell del contenedor de MongoDB. Puedes hacerlo ejecutando el siguiente comando en tu terminal de Ubuntu:
+```
+docker exec -it <nombre_del_contenedor> mongo
+```
+Reemplaza <nombre_del_contenedor> con el nombre o ID del contenedor de MongoDB.
+
+3. Una vez que estés dentro del shell de MongoDB, puedes ejecutar comandos de MongoDB, incluido show databases, para listar todas las bases de datos disponibles:
+```
+show databases
+```
 ### Aca te dejo algunos comandos básicos:
 
 **Mostrar Bases de datos:**
