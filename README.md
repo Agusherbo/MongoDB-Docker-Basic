@@ -13,6 +13,8 @@ Info util: el documento docker-compose.yml sirve para definir el entorno para le
 - Opción 2: En la línea de comando, ejecutar los siguientes comandos:
   ```
   touch docker-compose.yml
+  ```
+  ```
   cat > docker-compose.yml
   ```
   Touch: Crear en el directorio acutal. cat >: ingresas dentro del archivo para editar o escribir.
