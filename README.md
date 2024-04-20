@@ -88,7 +88,7 @@ chmod u+x mongo.sh
 ./mongo.sh
 ```
 
-## ¡Listo! Ya has instalado MongoDB con éxito. Entrando en el puerto [miIP]/2717 vas a poder entrar a la base de datos mongo db 
+## ¡Listo! Ya has instalado MongoDB con éxito. el puerto es :2717. 
 
 Para ingresar a la interfaz de línea de comandos de MongoDB y ejecutar comandos de MongoDB, sigue estos pasos:
 
