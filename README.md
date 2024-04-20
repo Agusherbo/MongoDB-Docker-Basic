@@ -23,21 +23,22 @@ Info util: el documento docker-compose.yml sirve para definir el entorno para le
 A continuacion el texto a copiar dentro del docker-compose.yml
 ```
 version: '2.2'
+
 services:
 
-  mongo:
-    image: mongo:4.0.4
-    restart: always
-    container_name: monguito
-    environment:
-      - MONGODB_USER="user"
-      - MONGODB_PASS="pass"	
-      
-    volumes:
-      - ./monguitodata:/data/db
-      - ./monguitodata/log:/var/log/mongodb/
-    ports:
-      - "27017:27017"
+ mongo:
+  image: mongo:4.0.4
+  restart: always
+  container_name: monguito
+  environment:
+    - MONGODB_USER="user"
+    - MONGODB_PASS="pass"
+  
+  volumes:
+    - ./monguitodata:/data/db
+    - ./monguitodata/log:/var/log/mongodb/
+  ports:
+    - "27017:27017"
 ```
 Explicación de cada línea
 - version del docker compose
