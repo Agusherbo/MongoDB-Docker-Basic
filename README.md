@@ -72,7 +72,7 @@ cd
 ```
 sudo docker-compose up -d
 ```
-# Mostrar mensaje: echo "Monguito está iniciandose ......."
+# Aparecera mensaje: echo "pulling mongo ....." y "Creating monguito...done"
 
 # Entrar en el contenedor
 ```
