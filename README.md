@@ -72,7 +72,7 @@ cd
 ```
 sudo docker-compose up -d
 ```
-# Aparecera mensaje: echo "pulling mongo ....." y "Creating monguito...done"
+Aparecera mensaje: echo "pulling mongo ....." y "Creating monguito...done"
 
 # Entrar en el contenedor
 ```
@@ -133,4 +133,16 @@ show databases
 ```
 > showCollections
 ```
+
+# Comandos para mostrar info cargada / Scrap Yahoo finance
+
+```
+sudo docker exec -it monguito mongo
+show dbs
+use dbReto
+show collections
+db.Yfinances.find().pretty()
+```
+
+El resultado sera el diccionario de clave, valor con la info extraida de yahoo finance y cargada en la bd de mongo dentro de neustro contenedor. 
 
